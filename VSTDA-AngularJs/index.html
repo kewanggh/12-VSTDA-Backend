@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Full-Stack Todo App</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/ng-sortable/dist/ng-sortable.css" />
+    <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/ng-sortable/dist/ng-sortable.css" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/style/style.css">
+    <!-- endinject -->
+</head>
+<header>Full-Stack Todo App
+
+    <hr>
+</header>
+
+<body data-ng-controller="MainController">
+    <div id="containerLeft" class="col-md-4">
+        <form data-ng-submit="addItem()">
+            <fieldset>
+                <div class="form-group">
+                    <label for="textInput">Text</label>
+                    <input type="text" id="textInput" class="form-control" placeholder="Add To Do" data-ng-model="ToDo.item" required />
+                </div>
+                <div class="form-group">
+                    <label for="disabledSelect">Priority</label>
+                    <select id="disabledSelect" class="form-control" data-ng-model="ToDo.priority">
+                        <option value=3>High</option>
+                        <option value=2>Medium</option>
+                        <option value=1>Low</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+        <div id="footer">
+            <button type="submit" class="btn btn-primary" id="addbutton"data-ng-click="addItem(ToDo)">Add Todo</button>
+            <p></p>
+        </div>
+    </div>
+    <div id="rightContainer" class="col-md-8">
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info" data-ng-click="sortItems('-priority')">Order by highest priority</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info" data-ng-click="sortItems('priority')">Order by lowest priority</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info" data-ng-click="sortItems('item')">Order alphabetically</button>
+            </div>
+        </div>
+        <div>
+          <!--   <ul as-sortable="board.dragControlListeners" data-ng-model="items" id="tasks">
+                <li data-ng-repeat="item in items" data-as-sortable-item class="as-sortable-item">
+                    <div data-as-sortable-item-handle id="itemrow"data-ng-class="{'important':{{item.priority}} === 3,'medium':{{item.priority}} === 2,'info':{{item.priority}}=== 1}" id="editbox">
+                            <input type="text" id="edit" ng-disabled = "!disabled" ng-model="item.item" placeholder="{{item.item}}" data-ng-class="{'important':{{item.priority}} === 3,'medium':{{item.priority}} === 2,'info':{{item.priority}}=== 1}"/>
+                            <a ng-click="disabled = !disabled" id="buttonedi">edit</a>
+                            <a ng-click="deleteItem(item)" id="buttondel">delete</a> <a ng-click="updateItem(item)" id="buttonupd">update</a> -->
+             <ul ui-sortable data-ng-model="items" id="tasks">
+                <li data-ng-repeat="item in items">
+                    <div id="itemrow" data-ng-class="{'important':{{item.priority}} === 3,'medium':{{item.priority}} === 2,'info':{{item.priority}}=== 1}" id="editbox">
+                            <input type="text" id="edit" ng-disabled = "!disabled" ng-model="item.item" placeholder="{{item.item}}" data-ng-class="{'important':{{item.priority}} === 3,'medium':{{item.priority}} === 2,'info':{{item.priority}}=== 1}"/>
+                            <a ng-click="disabled = !disabled" id="buttonedi">edit</a>
+                            <a ng-click="deleteItem(item)" id="buttondel">delete</a> <a ng-click="updateItem(item)" id="buttonupd">update</a>
+
+
+
+                            <!-- <a href="#" editable-text="item.item" data-ng-model="item.item" id="list"> {{ item.item}}</a>
+                            <a ng-click="deleteItem(item)" id="buttondel">delete</a> <a ng-click="updateItem(item)" id="buttonupd">update</a> -->
+                    </div>
+                </li>
+              
+            </ul>
+        </div>
+    </div>
+    <!-- <pre>{{items | json}}</pre> -->
+    <footer>design by Ke Wang 2016</footer>
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/ng-sortable/dist/ng-sortable.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/ng-sortable/dist/ng-sortable.js"></script>
+    <!-- inject:js -->
+    <script src="/app/app.js"></script>
+    <script src="/app/index.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

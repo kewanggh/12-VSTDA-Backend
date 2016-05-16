@@ -1,0 +1,22 @@
+{
+  "name": "07-VSTDA",
+  "homepage": "https://github.com/kewanggh/Astro-Weight-Calculator",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "ng-sortable": "^1.3.6",
+    "angular-xeditable": "^0.1.12",
+    "angular-ui-sortable": "^0.14.0"
+  }
+}

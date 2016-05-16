@@ -1,0 +1,170 @@
+#containerLeft {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-shadow: 10px 10px 5px #888888;
+    margin-top: 40px;
+    
+    background-color: #f2f2f3;
+    font-size: 1.5em;
+    color: rgb(91,192,222);
+
+
+
+}
+
+#rightContainer {
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.important {
+    background-color: #FFC7B6;
+}
+
+
+
+.medium {
+    background-color: lightyellow;
+}
+
+.info {
+    background-color: #cdebf9;
+    
+}
+#textInput{
+    
+}
+#select{
+    
+}
+html {
+    /*background-color: rgb(91,192,222);*/
+    border: 12px solid rgba(136, 136, 136,0.4);
+    height: 100%;
+    position: relative;
+}
+body {
+    margin: 30px 20px 30px 20px;
+    color: #666666;
+    
+    background-image: linear-gradient(45deg, #F2F2F3 25%, transparent 25%, transparent),
+     linear-gradient(-45deg, #F2F2F3 25%, transparent 25%, transparent), 
+     linear-gradient(45deg, transparent 75%, #F2F2F3 75%), 
+     linear-gradient(-45deg, transparent 75%, #F2F2F3 75%);
+    background-size: 50px 50px, 50px 50px, 50px 50px, 50px 50px, 50px 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-group {
+    /*width: 700px;*/
+    box-shadow: 10px 10px 5px #888888;
+    margin-bottom: 20px;
+}
+
+#header {
+    background-color: lightblue;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
+header {
+    height: 50px;
+    font-size: 4.5vw;
+    margin-bottom: 50px;
+    text-shadow: grey 0 0 10px, darkgrey 5px 5px 5px;
+    /*color: salmon;*/
+    color: rgb(91,192,222);
+    font-weight: bold;
+}   
+
+form {
+    padding-top: 10px;
+    font-size: 1em;
+
+}
+
+tbody {
+    width: 700px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#edibox {
+    background-color: lightblue;
+
+}
+
+#buttondel {
+    position: absolute;
+    right: 10px;
+}
+
+#buttonupd {
+    position: absolute;
+    right: 80px;
+}
+
+a {
+    position: absolute;
+    bottom: 10px;
+    text-decoration: none;
+}
+
+#edit {
+    position: absolute;
+    /*bottom: 5px;*/
+    padding-left: 10px;
+   
+    height: 46px;
+        border-width: 0px;
+    /*border-style: inset;*/
+    /*border-color: initial;*/
+    width: 400px;
+}
+
+#itemrow {
+    height: 50px;
+    border-radius: 5px;
+    margin-left: -40px;
+    border: 2px solid white;
+    padding-left: 10px;
+    /*width: 700px;*/
+    margin-top: 1px;
+    font-size: 1.5em;
+    position: relative;
+}
+#buttonedi {
+    position: absolute;
+    right: 170px;
+
+}
+#list{
+    padding-left: 10px;
+    text-decoration: none;
+
+}
+#addbutton {
+    background-color: rgb(91,192,222);
+    border: none;
+
+}
+input {
+    color: #333333;
+}
+
+/*box-shadow: 10px 10px 5px #888888;*/
+hr {
+   
+    border: 4px solid rgba(136, 136, 136,0.4);
+
+}
+li {
+    list-style-type: none;
+}
